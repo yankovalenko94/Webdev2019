@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    width: 1140px;
+    margin: 82px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: repeat(2, 260px);
+    grid-auto-rows: 260px;
+    gap: 60px;
+}
+
+.news-item {
+    &__img {
+        width: 100%;
+    }
+    &__descr {
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
