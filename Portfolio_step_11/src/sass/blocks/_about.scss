@@ -1,0 +1,60 @@
+.about {
+    padding-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 670px;
+        grid-template-rows: minmax(245px, auto) minmax(255px, auto);
+        grid-auto-rows: minmax(245px, auto);
+        column-gap: 70px;
+        row-gap: 40px;
+    }
+    &__photo {
+        grid-row: 1/3;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__descr {
+        padding-top: 6px;
+        .divider {
+            margin: 0;
+        }
+    }
+    &__title {
+        position: relative;
+        padding: 1px 0 0 12px;
+        @include before_circle;
+    }
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__skills {
+        display: grid;
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        grid-auto-rows: 1fr;
+        column-gap: 50px;
+        row-gap: 20px;
+        &-item {
+            display: grid;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+        }
+        &-circle {
+            position: relative;
+            padding: 15px 0 0 15px;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+        &-text {
+            margin-top: 6px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
